@@ -1,0 +1,25 @@
+.c-form {
+  border: 1px solid #000;
+  padding: 2rem;
+
+  input {
+    padding: .5rem 1rem;
+  }
+
+  &__group {
+    + .c-form__group {
+      margin-top: 2rem;
+    }
+  }
+
+  &__button {
+    color: #fff;
+    border: 1px solid #000;
+    background-color: gray;
+    padding: 1rem 4rem;
+    transition: .2s;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+<% meta = { title: '課題１', path: './' } -%>
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('./_partials/_head', { meta: meta}) %>
+  <body>
+
+	<%- include('./_partials/_layouts/_header') %>
+
+  <main class="l-main l-block">
+
+		<template id="table-row">
+			<tr>
+				<td class="c-table__name"></td>
+				<td class="c-table__date"></td>
+				<td class="c-table__price"></td>
+			</tr>
+		</template>
+
+		<div class="c-form">
+			<form>
+				<div class="c-form__group">
+					<label>
+						商品名：
+						<input class="js-nameInput" type="text">
+					</label>
+				</div>
+				<div class="c-form__group">
+					<label>
+						受注日：
+						<input class="js-dateInput" type="date" data-date-format="YYYY/MMMM/DD" >
+					</label>
+				</div>
+				<div class="c-form__group">
+					<label>
+						金額：
+						<input class="js-priceInput" type="number">
+					</label>
+				</div>
+				<div class="c-form__group">
+					<button class="c-form__button js-submitBtn" type="submit">登録</button>
+				</div>
+			</form>
+		</div>
+		<div>
+			<table class="c-table">
+				<tr>
+					<th>商品名</th>
+					<th>受注日</th>
+					<th>金額</th>
+				</tr>
+				<tbody class="js-tableBody">
+				</tbody>
+				
+			</table>
+		</div>
+    
+	</main>
+
+</body>
+</html>
